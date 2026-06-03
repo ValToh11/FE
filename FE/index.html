@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+   
+    <meta charset="UTF-8" />
+   
+    <title>Formation Élémentaire</title>
+     <meta name="author" content="VALLEE Thomas et LE MERRER RAYNAUD Julien" />
+     <link rel="icon" type="image/png" href="img/BIP.png"/>
+     <link rel="stylesheet" type="text/css" href="css/global.css" />
+     
+     <script src="java/global.js"></script>
+  </head>
+
+  <body>
+   
+    
+
+
+  <div class="nav-fixed">
+
+  <button id="toggle-menu" onclick="toggleMenu()">☰ Menu</button>
+
+  <div class="menu-wrap" id="menu" style="display:none;">
+
+  <div class="section">
+    <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sA')">
+      <span class="label"><span class="badge">A</span>Instruction générale</span>
+      <span class="chevron">&#8964;</span>
+    </button>
+    <div class="sub-list" id="sA">
+      <div class="sub-item"><a href="contenu/Instruction_generale/Roles_resp_CE.html">A1 — Rôles et responsabilités du chef d'équipe</a></div>
+      <div class="sub-item"><a href="contenu/Instruction_generale/les_methode_peda.html">A2 — Les méthodes et les outils pédagogiques</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sB')">
+      <span class="label"><span class="badge">B</span>Instruction au tir au combat</span>
+      <span class="chevron">&#8964;</span>
+    </button>
+    <div class="sub-list" id="sB">
+      <div class="sub-item"><a href="contenu/Instruction_tir/glock_17.html">B1 — CATI Glock 17 : Bravo</a></div>
+      <div class="sub-item"><a href="contenu/Instruction_tir/at_4.html">B2 — CATI AT4 : Bravo</a></div>
+      <div class="sub-item"><a href="contenu/Instruction_tir/minimi.html">B3 — CATI MiniMi : Bravo</a></div>
+      <div class="sub-item"><a href="contenu/Instruction_tir/lg.html">B4 — CATI LG : Bravo</a></div>
+      <div class="sub-item"><a href="contenu/Instruction_tir/hk416.html">B5 — CATI HK416 : Delta Nuit</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sC')">
+      <span class="label"><span class="badge">C</span>Tactique</span>
+      <span class="chevron">&#8964;</span>
+    </button>
+    <div class="sub-list" id="sC">
+      <div class="sub-item">
+        <button class="sub2-btn" aria-expanded="false" onclick="toggle2(this,'sC1')">
+          C1 — Actes élémentaires du trinôme et commandement
+          <span class="chevron2">&#8964;</span>
+        </button>
+        <div class="sub3-list" id="sC1">
+          <a href="C_METTRE">C11 — Se déplacer et ses ordres</a>
+          <a href="C_METTRE">C12 — S'arrêter, tomber en garde et ses ordres</a>
+          <a href="C_METTRE">C13 — Utiliser ses armes et ses ordres</a>
+        </div>
+      </div>
+      <div class="sub-item">
+        <button class="sub2-btn" aria-expanded="false" onclick="toggle2(this,'sC2')">
+          C2 — Actes missions du trinôme
+          <span class="chevron2">&#8964;</span>
+        </button>
+        <div class="sub3-list" id="sC2">
+          <a href="C_METTRE">C21 — Surveiller</a>
+          <a href="C_METTRE">C22 — Éclairer</a>
+          <a href="C_METTRE">C23 — Appuyer</a>
+          <a href="C_METTRE">C24 — Neutraliser et détruire</a>
+          <a href="C_METTRE">C25 — S'emparer de et reconnaître un point</a>
+          <a href="C_METTRE">C26 — Assurer la liaison</a>
+          <a href="C_METTRE">C27 — Fouiller</a>
+        </div>
+      </div>
+      <div class="sub-item">
+        <button class="sub2-btn" aria-expanded="false" onclick="toggle2(this,'sC3')">
+          C3 — Actes élémentaires en milieu urbain
+          <span class="chevron2">&#8964;</span>
+        </button>
+        <div class="sub3-list" id="sC3">
+          <a href="C_METTRE">C31 — Investir une pièce</a>
+          <a href="C_METTRE">C32 — Prendre un escalier</a>
+          <a href="C_METTRE">C33 — Passage en appui mutuel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sD')">
+      <span class="label"><span class="badge">D</span>Génie</span>
+      <span class="chevron">&#8964;</span>
+    </button>
+    <div class="sub-list" id="sD">
+      <div class="sub-item"><a href="D_METTRE">D1 — Identification des mines et réactions à adopter</a></div>
+      <div class="sub-item"><a href="D_METTRE">D2 — Procédure du V-Check</a></div>
+      <div class="sub-item"><a href="D_METTRE">D3 — Procédure du 0/5/25</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sE')">
+      <span class="label"><span class="badge">E</span>Transmission</span>
+      <span class="chevron">&#8964;</span>
+    </button>
+    <div class="sub-list" id="sE">
+      <div class="sub-item"><a href="E_METTRE">E1 — Postes radios</a></div>
+      <div class="sub-item"><a href="E_METTRE">E2 — Procédures radio complète</a></div>
+      <div class="sub-item"><a href="E_METTRE">E3 — Procédures radio simplifiée</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sF')">
+      <span class="label"><span class="badge">F</span>Topographie</span>
+      <span class="chevron">&#8964;</span>
+    </button>
+    <div class="sub-list" id="sF">
+      <div class="sub-item"><a href="F_METTRE">F1 — Cartes et symbologie</a></div>
+      <div class="sub-item"><a href="F_METTRE">F2 — Prise et report de coordonnées</a></div>
+      <div class="sub-item"><a href="F_METTRE">F3 — Utilisation de la boussole et navigation</a></div>
+      <div class="sub-item"><a href="F_METTRE">F4 — Triangulation</a></div>
+      <div class="sub-item"><a href="F_METTRE">F5 — Course d'orientation 5 km</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sG')">
+      <span class="label"><span class="badge">G</span>Entraînement physique</span>
+      <span class="chevron">&#8964;</span>
+    </button>
+    <div class="sub-list" id="sG">
+      <div class="sub-item"><a href="G_METTRE">G1 — Parcours d'obstacle</a></div>
+      <div class="sub-item"><a href="G_METTRE">G2 — Parcours tactique d'évasion : mission de nuit</a></div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+</div>
+  <h1>Formation Élémentaire</h1>
+
+ 
+  </body>
+</html>
