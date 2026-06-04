@@ -1,4 +1,4 @@
-
+/* Mise en page globale et styles de base */
 :root {
   --color-background-primary: #1e1f16;
   --color-background-secondary: #2a2b1e;
@@ -12,30 +12,51 @@
 }
 
 body {
-  background: #15160E;
   color: #B9A878;
+  background: #15160E;
   width: 80%;
   margin: auto;
+  padding-top: 120px;
+}
+
+/* Bandeau fixe en haut de page */
+.site-header {
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 104px;
+  background-image: url('../img/image bandeau fe.png');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
 }
 
 h1 {
-  margin: auto;
-  width: 350px;
+  flex: 1;
   font-size: 2em;
   text-align: center;
-  padding: 1em;
+  padding: 0;
+  margin: 0;
 }
 
-/* Conteneur fixe en haut à gauche */
+/* Conteneur du menu dans le bandeau */
 .nav-fixed {
-  position: fixed;
-  top: 16px;
-  left: 16px;
+  position: relative;
   z-index: 1000;
+  flex-shrink: 0;
 }
 
 /* Menu déroulant */
 .menu-wrap {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
   width: 280px;
   max-height: calc(100vh - 80px);
   overflow-y: auto;
@@ -44,7 +65,6 @@ h1 {
   background: var(--color-background-primary);
   border: 0.5px solid var(--color-border-tertiary);
   border-radius: var(--border-radius-lg);
-  margin-top: 8px;
 }
 
 .section {
@@ -191,3 +211,43 @@ h1 {
 #toggle-menu:hover {
   background: var(--color-background-secondary);
 }
+
+/* Bouton retour accueil */
+.home-btn {
+  flex-shrink: 0;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+}
+
+.home-btn:hover {
+  background: var(--color-background-secondary);
+}
+
+/*pied de page*/
+ .site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background: var(--color-background-primary);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  border-top: 0.5px solid var(--color-border-tertiary);
+  margin: auto;
+}
+.site-footer p {
+  display: inline-block;
+  margin: 4px 30px;
+  text-align: justify;
+}
+/*A1- Rôles et responsabilités du chef d'équipe*/
+
+
+
+
+/*A2- Les méthodes et outils pédagogiques*/
