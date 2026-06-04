@@ -1,4 +1,4 @@
-
+/* Mise en page globale et styles de base */
 :root {
   --color-background-primary: #1e1f16;
   --color-background-secondary: #2a2b1e;
@@ -12,8 +12,8 @@
 }
 
 body {
-  background: #15160E;
   color: #B9A878;
+  background: #15160E;
   width: 80%;
   margin: auto;
   padding-top: 120px;
@@ -21,6 +21,7 @@ body {
 
 /* Bandeau fixe en haut de page */
 .site-header {
+  color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,7 +39,7 @@ body {
 
 h1 {
   flex: 1;
-  font-size: 1.4em;
+  font-size: 2em;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -209,4 +210,19 @@ h1 {
 
 #toggle-menu:hover {
   background: var(--color-background-secondary);
+}
+ .site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background: var(--color-background-primary);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  border-top: 0.5px solid var(--color-border-tertiary);
+  margin: auto;
+}
+.site-footer p {
+  display: inline-block;
+  margin: 4px 30px;
+  text-align: justify;
 }
