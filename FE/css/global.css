@@ -16,26 +16,46 @@ body {
   color: #B9A878;
   width: 80%;
   margin: auto;
+  padding-top: 120px;
+}
+
+/* Bandeau fixe en haut de page */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 104px;
+  background-image: url('../img/image bandeau fe.png');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
 }
 
 h1 {
-  margin: auto;
-  width: 350px;
-  font-size: 2em;
+  flex: 1;
+  font-size: 1.4em;
   text-align: center;
-  padding: 1em;
+  padding: 0;
+  margin: 0;
 }
 
-/* Conteneur fixe en haut à gauche */
+/* Conteneur du menu dans le bandeau */
 .nav-fixed {
-  position: fixed;
-  top: 16px;
-  left: 16px;
+  position: relative;
   z-index: 1000;
+  flex-shrink: 0;
 }
 
 /* Menu déroulant */
 .menu-wrap {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
   width: 280px;
   max-height: calc(100vh - 80px);
   overflow-y: auto;
@@ -44,7 +64,6 @@ h1 {
   background: var(--color-background-primary);
   border: 0.5px solid var(--color-border-tertiary);
   border-radius: var(--border-radius-lg);
-  margin-top: 8px;
 }
 
 .section {
