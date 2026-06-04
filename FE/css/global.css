@@ -245,6 +245,13 @@ h1 {
   margin: 4px 30px;
   text-align: justify;
 }
+
+h2, h3, h4 {
+  text-decoration: underline;
+}
+h2 {
+  text-align: center;
+}
 /*A1- Rôles et responsabilités du chef d'équipe*/
 
 
