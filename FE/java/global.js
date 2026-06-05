@@ -17,3 +17,142 @@ function toggleMenu() {
   menu.style.display = isOpen ? 'none' : 'block';
   btn.textContent = isOpen ? '☰ Menu' : '✕ Fermer';
 }
+
+function getMenuPrefix() {
+  const parts = window.location.pathname.split('/').filter(p => p !== '');
+  const contenIdx = parts.indexOf('contenu');
+  if (contenIdx === -1) return '';
+  // depth = number of levels from root to current file (excluding filename)
+  return '../'.repeat(parts.length - contenIdx - 1);
+}
+
+function buildMenuHTML(p) {
+  return `
+    <div class="section">
+      <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sA')">
+        <span class="label"><span class="badge">A</span>Instruction générale</span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="sub-list" id="sA">
+        <div class="sub-item"><a href="${p}contenu/A_instruction_generale/Roles_resp_CE.html">A1 — Rôles et responsabilités du chef d'équipe</a></div>
+        <div class="sub-item"><a href="${p}contenu/A_instruction_generale/les_methode_peda.html">A2 — Les méthodes et les outils pédagogiques</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sB')">
+        <span class="label"><span class="badge">B</span>Instruction au tir au combat</span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="sub-list" id="sB">
+        <div class="sub-item"><a href="${p}contenu/B_instruction_tir/glock_17.html">B1 — CATI Glock 17 : Bravo</a></div>
+        <div class="sub-item"><a href="${p}contenu/B_instruction_tir/at_4.html">B2 — CATI AT4 : Bravo</a></div>
+        <div class="sub-item"><a href="${p}contenu/B_instruction_tir/minimi.html">B3 — CATI MiniMi : Bravo</a></div>
+        <div class="sub-item"><a href="${p}contenu/B_instruction_tir/lg.html">B4 — CATI LG : Bravo</a></div>
+        <div class="sub-item"><a href="${p}contenu/B_instruction_tir/hk416.html">B5 — CATI HK416 : Delta Nuit</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sC')">
+        <span class="label"><span class="badge">C</span>Tactique</span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="sub-list" id="sC">
+        <div class="sub-item">
+          <button class="sub2-btn" aria-expanded="false" onclick="toggle2(this,'sC1')">
+            C1 — Actes élémentaires du trinôme et commandement
+            <span class="chevron2">&#8964;</span>
+          </button>
+          <div class="sub3-list" id="sC1">
+            <a href="${p}contenu/C_tactique/C1_actes_elementaires/se_deplacer.html">C11 — Se déplacer et ses ordres</a>
+            <a href="${p}contenu/C_tactique/C1_actes_elementaires/s_arrete.html">C12 — S'arrêter, tomber en garde et ses ordres</a>
+            <a href="${p}contenu/C_tactique/C1_actes_elementaires/utiliser_ses_armes.html">C13 — Utiliser ses armes et ses ordres</a>
+          </div>
+        </div>
+        <div class="sub-item">
+          <button class="sub2-btn" aria-expanded="false" onclick="toggle2(this,'sC2')">
+            C2 — Actes missions du trinôme
+            <span class="chevron2">&#8964;</span>
+          </button>
+          <div class="sub3-list" id="sC2">
+            <a href="${p}contenu/C_tactique/C2_missions/surveiller.html">C21 — Surveiller</a>
+            <a href="${p}contenu/C_tactique/C2_missions/eclairer.html">C22 — Éclairer</a>
+            <a href="${p}contenu/C_tactique/C2_missions/appuyer.html">C23 — Appuyer</a>
+            <a href="${p}contenu/C_tactique/C2_missions/neutraliser_detruire.html">C24 — Neutraliser et détruire</a>
+            <a href="${p}contenu/C_tactique/C2_missions/s_emparer_de.html">C25 — S'emparer de et reconnaître un point</a>
+            <a href="${p}contenu/C_tactique/C2_missions/assurer_la_liaison.html">C26 — Assurer la liaison</a>
+            <a href="${p}contenu/C_tactique/C2_missions/fouiller.html">C27 — Fouiller</a>
+          </div>
+        </div>
+        <div class="sub-item">
+          <button class="sub2-btn" aria-expanded="false" onclick="toggle2(this,'sC3')">
+            C3 — Actes élémentaires en milieu urbain
+            <span class="chevron2">&#8964;</span>
+          </button>
+          <div class="sub3-list" id="sC3">
+            <a href="${p}contenu/C_tactique/C3_actes_elementaires/investir_une_piece.html">C31 — Investir une pièce</a>
+            <a href="${p}contenu/C_tactique/C3_actes_elementaires/prendre_un_escalier.html">C32 — Prendre un escalier</a>
+            <a href="${p}contenu/C_tactique/C3_actes_elementaires/appui_mutuel.html">C33 — Passage en appui mutuel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sD')">
+        <span class="label"><span class="badge">D</span>Génie</span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="sub-list" id="sD">
+        <div class="sub-item"><a href="${p}contenu/D_genie/identification.html">D1 — Identification des mines et réactions à adopter</a></div>
+        <div class="sub-item"><a href="${p}contenu/D_genie/v_check.html">D2 — Procédure du V-Check</a></div>
+        <div class="sub-item"><a href="${p}contenu/D_genie/0_5_25.html">D3 — Procédure du 0/5/25</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sE')">
+        <span class="label"><span class="badge">E</span>Transmission</span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="sub-list" id="sE">
+        <div class="sub-item"><a href="${p}contenu/E_transmissions/postes_radios.html">E1 — Postes radios</a></div>
+        <div class="sub-item"><a href="${p}contenu/E_transmissions/procedure_complete.html">E2 — Procédures radio complète</a></div>
+        <div class="sub-item"><a href="${p}contenu/E_transmissions/procedure_simplifiee.html">E3 — Procédures radio simplifiée</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sF')">
+        <span class="label"><span class="badge">F</span>Topographie</span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="sub-list" id="sF">
+        <div class="sub-item"><a href="${p}contenu/F_topographie/cartes.html">F1 — Cartes et symbologie</a></div>
+        <div class="sub-item"><a href="${p}contenu/F_topographie/coordonees.html">F2 — Prise et report de coordonnées</a></div>
+        <div class="sub-item"><a href="${p}contenu/F_topographie/boussole_et_outils.html">F3 — Utilisation de la boussole et navigation</a></div>
+        <div class="sub-item"><a href="${p}contenu/F_topographie/triangulation.html">F4 — Triangulation</a></div>
+        <div class="sub-item"><a href="${p}contenu/F_topographie/course_d_orientation.html">F5 — Course d'orientation 5 km</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sG')">
+        <span class="label"><span class="badge">G</span>Entraînement physique</span>
+        <span class="chevron">&#8964;</span>
+      </button>
+      <div class="sub-list" id="sG">
+        <div class="sub-item"><a href="${p}contenu/G_entrainement_physique/parcours_obstacle.html">G1 — Parcours d'obstacle</a></div>
+        <div class="sub-item"><a href="${p}contenu/G_entrainement_physique/aguerrissement.html">G2 — Parcours tactique d'évasion : mission de nuit</a></div>
+      </div>
+    </div>
+  `;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menu = document.getElementById('menu');
+  if (menu) {
+    menu.innerHTML = buildMenuHTML(getMenuPrefix());
+  }
+});

@@ -16,7 +16,7 @@ body {
   background: #15160E;
   width: 80%;
   margin: auto;
-  padding-top: 120px;
+  padding-top: 160px;
 }
 
 /* Bandeau fixe en haut de page */
@@ -30,7 +30,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 16px;
-  height: 104px;
+  height: 140px;
   background-image: url('../img/image bandeau fe.png');
   background-size: cover;
   background-position: center;
@@ -38,7 +38,11 @@ body {
 }
 
 h1 {
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60%;
   font-size: 2em;
   text-align: center;
   padding: 0;
@@ -197,6 +201,7 @@ h1 {
 #toggle-menu {
   display: block;
   width: 100%;
+  min-width: 95px;
   padding: 10px 18px;
   font-size: 14px;
   font-weight: 500;
@@ -215,6 +220,7 @@ h1 {
 /* Bouton retour accueil */
 .home-btn {
   flex-shrink: 0;
+  margin-left: auto;
   padding: 10px 18px;
   font-size: 14px;
   font-weight: 500;
@@ -252,9 +258,37 @@ h2, h3, h4 {
 h2 {
   text-align: center;
 }
-/*A1- Rôles et responsabilités du chef d'équipe*/
-
-
-
-
-/*A2- Les méthodes et outils pédagogiques*/
+ /*Glock 17*/
+ .glock-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 20px;
+ }
+ .glock-text {
+  flex: 1;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 30px;
+  margin-right: 20px;
+  text-align: justify;
+  background: var(--color-background-primary);
+ }
+ .glock-image {
+  flex: 0 0 40%;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 10px;
+  background: var(--color-background-primary);
+ }
+ .glock17 {
+  width: 100%;
+  display: block;
+ }
+ .glock-desc {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  margin-top: 20px;
+  background: var(--color-background-primary);
+ }
