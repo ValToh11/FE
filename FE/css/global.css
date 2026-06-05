@@ -245,6 +245,7 @@ h1 {
   font-size: 14px;
   border-top: 0.5px solid var(--color-border-tertiary);
   margin: auto;
+  margin-top: 40px;
 }
 .site-footer p {
   display: inline-block;
@@ -292,3 +293,37 @@ h2 {
   margin-top: 20px;
   background: var(--color-background-primary);
  }
+ /* --- Le tableau --- */
+    table {
+      border-collapse: collapse;  /* fusionne les bordures en une seule ligne */
+      width: 100%;
+      font-size: 0.95rem;
+      background: var(--color-background-primary);
+      
+    }
+ 
+    th,
+    td {
+      border: 1px solid var(--color-border-tertiary);
+      
+      padding: 6px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+ 
+    thead th {
+      font-weight: bold;
+    }
+ 
+    /* Première colonne en gras (comme sur le modèle) */
+    tbody th[scope="row"] {
+      font-weight: bold;
+      text-align: left;
+    }
+ 
+    caption {
+      caption-side: bottom;
+      text-align: left;
+      font-size: 0.85rem;
+      padding-top: 6px;
+    }
