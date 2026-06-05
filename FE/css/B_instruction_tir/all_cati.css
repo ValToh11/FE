@@ -1,0 +1,50 @@
+ .glock-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 20px;
+ }
+
+.CATI_container {
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+.left_column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.right_column {
+  flex: 1;
+  flex: 0 0 40%;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 10px;
+  background: var(--color-background-primary);
+} 
+ .description_box {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  margin-top: 20px;
+  background: var(--color-background-primary);
+}
+ 
+ .text {
+  flex: 1;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 30px;
+  margin-right: 20px;
+  text-align: justify;
+  background: var(--color-background-primary);
+ }
+
+.img_item {
+  width: 100%;
+  display: block;
+ }
