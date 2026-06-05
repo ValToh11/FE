@@ -1,163 +1,378 @@
 <!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <title>Formation Élémentaire</title>
+    <meta name="author" content="VALLEE Thomas et LE MERRER RAYNAUD Julien" />
+    <link rel="icon" type="image/png" href="../../img/BIP.png" />
+    <link rel="stylesheet" type="text/css" href="../../css/global.css" />
 
-  <meta charset="UTF-8" />
+    <script src="../../java/global.js"></script>
+  </head>
 
-  <title>Formation Élémentaire</title>
-  <meta name="author" content="VALLEE Thomas et LE MERRER RAYNAUD Julien" />
-  <link rel="icon" type="image/png" href="../../img/BIP.png" />
-  <link rel="stylesheet" type="text/css" href="../../css/global.css" />
+  <body>
+    <header class="site-header">
+      <div class="nav-fixed">
+        <button id="toggle-menu" onclick="toggleMenu()">☰ Menu</button>
 
-  <script src="../../java/global.js"></script>
-</head>
-
-<body>
-
-  <header class="site-header">
-
-    <div class="nav-fixed">
-
-      <button id="toggle-menu" onclick="toggleMenu()">☰ Menu</button>
-
-      <div class="menu-wrap" id="menu" style="display:none;">
-
-        <div class="section">
-          <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sA')">
-            <span class="label"><span class="badge">A</span>Instruction générale</span>
-            <span class="chevron">&#8964;</span>
-          </button>
-          <div class="sub-list" id="sA">
-            <div class="sub-item"><a href="../A_instruction_generale/Roles_resp_CE.html">A1 — Rôles et
-                responsabilités du chef d’équipe</a></div>
-            <div class="sub-item"><a href="../A_instruction_generale/les_methode_peda.html">A2 — Les méthodes et les
-                outils pédagogiques</a></div>
-          </div>
-        </div>
-
-        <div class="section">
-          <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sB')">
-            <span class="label"><span class="badge">B</span>Instruction au tir au combat</span>
-            <span class="chevron">&#8964;</span>
-          </button>
-          <div class="sub-list" id="sB">
-            <div class="sub-item"><a href="../B_instruction_tir/glock_17.html">B1 — CATI Glock 17 : Bravo</a></div>
-            <div class="sub-item"><a href="../B_instruction_tir/at_4.html">B2 — CATI AT4 : Bravo</a></div>
-            <div class="sub-item"><a href="../B_instruction_tir/minimi.html">B3 — CATI MiniMi : Bravo</a></div>
-            <div class="sub-item"><a href="../B_instruction_tir/lg.html">B4 — CATI LG : Bravo</a></div>
-            <div class="sub-item"><a href="../B_instruction_tir/hk416.html">B5 — CATI HK416 : Delta Nuit</a></div>
-          </div>
-        </div>
-
-        <div class="section">
-          <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sC')">
-            <span class="label"><span class="badge">C</span>Tactique</span>
-            <span class="chevron">&#8964;</span>
-          </button>
-          <div class="sub-list" id="sC">
-            <div class="sub-item">
-              <button class="sub2-btn" aria-expanded="false" onclick="toggle2(this,'sC1')">
-                C1 — Actes élémentaires du trinôme et commandement
-                <span class="chevron2">&#8964;</span>
-              </button>
-              <div class="sub3-list" id="sC1">
-                <a href="../C_tactique/C1_actes_elementaires/se_deplacer.html">C11 — Se déplacer et ses ordres</a>
-                <a href="../C_tactique/C1_actes_elementaires/s_arrete.html">C12 — S’arrêter, tomber en garde et ses ordres</a>
-                <a href="../C_tactique/C1_actes_elementaires/utiliser_ses_armes.html">C13 — Utiliser ses armes et ses ordres</a>
+        <div class="menu-wrap" id="menu" style="display: none">
+          <div class="section">
+            <button
+              class="section-btn"
+              aria-expanded="false"
+              onclick="toggle(this, 'sA')"
+            >
+              <span class="label"
+                ><span class="badge">A</span>Instruction générale</span
+              >
+              <span class="chevron">&#8964;</span>
+            </button>
+            <div class="sub-list" id="sA">
+              <div class="sub-item">
+                <a href="../A_instruction_generale/Roles_resp_CE.html"
+                  >A1 — Rôles et responsabilités du chef d’équipe</a
+                >
               </div>
-            </div>
-            <div class="sub-item">
-              <button class="sub2-btn" aria-expanded="false" onclick="toggle2(this,'sC2')">
-                C2 — Actes missions du trinôme
-                <span class="chevron2">&#8964;</span>
-              </button>
-              <div class="sub3-list" id="sC2">
-                <a href="../C_tactique/C2_missions/surveiller.html">C21 — Surveiller</a>
-                <a href="../C_tactique/C2_missions/eclairer.html">C22 — Éclairer</a>
-                <a href="../C_tactique/C2_missions/appuyer.html">C23 — Appuyer</a>
-                <a href="../C_tactique/C2_missions/neutraliser_detruire.html">C24 — Neutraliser et détruire</a>
-                <a href="../C_tactique/C2_missions/s_emparer_de.html">C25 — S’emparer de et reconnaître un point</a>
-                <a href="../C_tactique/C2_missions/assurer_la_liaison.html">C26 — Assurer la liaison</a>
-                <a href="../C_tactique/C2_missions/fouiller.html">C27 — Fouiller</a>
-              </div>
-            </div>
-            <div class="sub-item">
-              <button class="sub2-btn" aria-expanded="false" onclick="toggle2(this,'sC3')">
-                C3 — Actes élémentaires en milieu urbain
-                <span class="chevron2">&#8964;</span>
-              </button>
-              <div class="sub3-list" id="sC3">
-                <a href="../C_tactique/C3_actes_elementaires/investir_une_piece.html">C31 — Investir une pièce</a>
-                <a href="../C_tactique/C3_actes_elementaires/prendre_un_escalier.html">C32 — Prendre un escalier</a>
-                <a href="../C_tactique/C3_actes_elementaires/appui_mutuel.html">C33 — Passage en appui mutuel</a>
+              <div class="sub-item">
+                <a href="../A_instruction_generale/les_methode_peda.html"
+                  >A2 — Les méthodes et les outils pédagogiques</a
+                >
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="section">
-          <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sD')">
-            <span class="label"><span class="badge">D</span>Génie</span>
-            <span class="chevron">&#8964;</span>
-          </button>
-          <div class="sub-list" id="sD">
-            <div class="sub-item"><a href="../D_genie/identification.html">D1 — Identification des mines et réactions à adopter</a></div>
-            <div class="sub-item"><a href="../D_genie/v_check.html">D2 — Procédure du V-Check</a></div>
-            <div class="sub-item"><a href="../D_genie/0_5_25.html">D3 — Procédure du 0/5/25</a></div>
+          <div class="section">
+            <button
+              class="section-btn"
+              aria-expanded="false"
+              onclick="toggle(this, 'sB')"
+            >
+              <span class="label"
+                ><span class="badge">B</span>Instruction au tir au combat</span
+              >
+              <span class="chevron">&#8964;</span>
+            </button>
+            <div class="sub-list" id="sB">
+              <div class="sub-item">
+                <a href="../B_instruction_tir/glock_17.html"
+                  >B1 — CATI Glock 17 : Bravo</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../B_instruction_tir/at_4.html"
+                  >B2 — CATI AT4 : Bravo</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../B_instruction_tir/minimi.html"
+                  >B3 — CATI MiniMi : Bravo</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../B_instruction_tir/lg.html">B4 — CATI LG : Bravo</a>
+              </div>
+              <div class="sub-item">
+                <a href="../B_instruction_tir/hk416.html"
+                  >B5 — CATI HK416 : Delta Nuit</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <button
+              class="section-btn"
+              aria-expanded="false"
+              onclick="toggle(this, 'sC')"
+            >
+              <span class="label"><span class="badge">C</span>Tactique</span>
+              <span class="chevron">&#8964;</span>
+            </button>
+            <div class="sub-list" id="sC">
+              <div class="sub-item">
+                <button
+                  class="sub2-btn"
+                  aria-expanded="false"
+                  onclick="toggle2(this, 'sC1')"
+                >
+                  C1 — Actes élémentaires du trinôme et commandement
+                  <span class="chevron2">&#8964;</span>
+                </button>
+                <div class="sub3-list" id="sC1">
+                  <a href="../C_tactique/C1_actes_elementaires/se_deplacer.html"
+                    >C11 — Se déplacer et ses ordres</a
+                  >
+                  <a href="../C_tactique/C1_actes_elementaires/s_arrete.html"
+                    >C12 — S’arrêter, tomber en garde et ses ordres</a
+                  >
+                  <a
+                    href="../C_tactique/C1_actes_elementaires/utiliser_ses_armes.html"
+                    >C13 — Utiliser ses armes et ses ordres</a
+                  >
+                </div>
+              </div>
+              <div class="sub-item">
+                <button
+                  class="sub2-btn"
+                  aria-expanded="false"
+                  onclick="toggle2(this, 'sC2')"
+                >
+                  C2 — Actes missions du trinôme
+                  <span class="chevron2">&#8964;</span>
+                </button>
+                <div class="sub3-list" id="sC2">
+                  <a href="../C_tactique/C2_missions/surveiller.html"
+                    >C21 — Surveiller</a
+                  >
+                  <a href="../C_tactique/C2_missions/eclairer.html"
+                    >C22 — Éclairer</a
+                  >
+                  <a href="../C_tactique/C2_missions/appuyer.html"
+                    >C23 — Appuyer</a
+                  >
+                  <a href="../C_tactique/C2_missions/neutraliser_detruire.html"
+                    >C24 — Neutraliser et détruire</a
+                  >
+                  <a href="../C_tactique/C2_missions/s_emparer_de.html"
+                    >C25 — S’emparer de et reconnaître un point</a
+                  >
+                  <a href="../C_tactique/C2_missions/assurer_la_liaison.html"
+                    >C26 — Assurer la liaison</a
+                  >
+                  <a href="../C_tactique/C2_missions/fouiller.html"
+                    >C27 — Fouiller</a
+                  >
+                </div>
+              </div>
+              <div class="sub-item">
+                <button
+                  class="sub2-btn"
+                  aria-expanded="false"
+                  onclick="toggle2(this, 'sC3')"
+                >
+                  C3 — Actes élémentaires en milieu urbain
+                  <span class="chevron2">&#8964;</span>
+                </button>
+                <div class="sub3-list" id="sC3">
+                  <a
+                    href="../C_tactique/C3_actes_elementaires/investir_une_piece.html"
+                    >C31 — Investir une pièce</a
+                  >
+                  <a
+                    href="../C_tactique/C3_actes_elementaires/prendre_un_escalier.html"
+                    >C32 — Prendre un escalier</a
+                  >
+                  <a
+                    href="../C_tactique/C3_actes_elementaires/appui_mutuel.html"
+                    >C33 — Passage en appui mutuel</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <button
+              class="section-btn"
+              aria-expanded="false"
+              onclick="toggle(this, 'sD')"
+            >
+              <span class="label"><span class="badge">D</span>Génie</span>
+              <span class="chevron">&#8964;</span>
+            </button>
+            <div class="sub-list" id="sD">
+              <div class="sub-item">
+                <a href="../D_genie/identification.html"
+                  >D1 — Identification des mines et réactions à adopter</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../D_genie/v_check.html">D2 — Procédure du V-Check</a>
+              </div>
+              <div class="sub-item">
+                <a href="../D_genie/0_5_25.html">D3 — Procédure du 0/5/25</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <button
+              class="section-btn"
+              aria-expanded="false"
+              onclick="toggle(this, 'sE')"
+            >
+              <span class="label"
+                ><span class="badge">E</span>Transmission</span
+              >
+              <span class="chevron">&#8964;</span>
+            </button>
+            <div class="sub-list" id="sE">
+              <div class="sub-item">
+                <a href="../E_transmissions/postes_radios.html"
+                  >E1 — Postes radios</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../E_transmissions/procedure_complete.html"
+                  >E2 — Procédures radio complète</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../E_transmissions/procedure_simplifiee.html"
+                  >E3 — Procédures radio simplifiée</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <button
+              class="section-btn"
+              aria-expanded="false"
+              onclick="toggle(this, 'sF')"
+            >
+              <span class="label"><span class="badge">F</span>Topographie</span>
+              <span class="chevron">&#8964;</span>
+            </button>
+            <div class="sub-list" id="sF">
+              <div class="sub-item">
+                <a href="../F_topographie/cartes.html"
+                  >F1 — Cartes et symbologie</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../F_topographie/coordonees.html"
+                  >F2 — Prise et report de coordonnées</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../F_topographie/boussole_et_outils.html"
+                  >F3 — Utilisation de la boussole et navigation</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../F_topographie/triangulation.html"
+                  >F4 — Triangulation</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../F_topographie/course_d_orientation.html"
+                  >F5 — Course d’orientation 5 km</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <button
+              class="section-btn"
+              aria-expanded="false"
+              onclick="toggle(this, 'sG')"
+            >
+              <span class="label"
+                ><span class="badge">G</span>Entraînement physique</span
+              >
+              <span class="chevron">&#8964;</span>
+            </button>
+            <div class="sub-list" id="sG">
+              <div class="sub-item">
+                <a href="../G_entrainement_physique/parcours_obstacle.html"
+                  >G1 — Parcours d’obstacle</a
+                >
+              </div>
+              <div class="sub-item">
+                <a href="../G_entrainement_physique/aguerrissement.html"
+                  >G2 — Parcours tactique d’évasion : mission de nuit</a
+                >
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="section">
-          <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sE')">
-            <span class="label"><span class="badge">E</span>Transmission</span>
-            <span class="chevron">&#8964;</span>
-          </button>
-          <div class="sub-list" id="sE">
-            <div class="sub-item"><a href="../E_transmissions/postes_radios.html">E1 — Postes radios</a></div>
-            <div class="sub-item"><a href="../E_transmissions/procedure_complete.html">E2 — Procédures radio complète</a></div>
-            <div class="sub-item"><a href="../E_transmissions/procedure_simplifiee.html">E3 — Procédures radio simplifiée</a></div>
-          </div>
+      <h1>CATI Glock 17 : Bravo</h1>
+
+      <a href="../../index.html" class="home-btn">⌂ Accueil</a>
+    </header>
+
+    <h2 class="content-title">CATI AT-4 : Bravo</h2>
+
+    <div class="AT4_container">
+      <div class="left_column_at4">
+        <div class="at4_global">
+          <p>
+          l'AT-4 CS - pour Eighty Four Confined Space - est un lance-roquette de type arme individuelle consommable.<br />
+          Il est destiné, en combat à courte distance, à détruire les véhicules.<br />
+          Une contre masse liquide absorbe les gazs de propulsion permettant un tir depuis un espace confiné.<br />
+          </p>
         </div>
 
-        <div class="section">
-          <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sF')">
-            <span class="label"><span class="badge">F</span>Topographie</span>
-            <span class="chevron">&#8964;</span>
-          </button>
-          <div class="sub-list" id="sF">
-            <div class="sub-item"><a href="../F_topographie/cartes.html">F1 — Cartes et symbologie</a></div>
-            <div class="sub-item"><a href="../F_topographie/coordonees.html">F2 — Prise et report de coordonnées</a></div>
-            <div class="sub-item"><a href="../F_topographie/boussole_et_outils.html">F3 — Utilisation de la boussole et navigation</a></div>
-            <div class="sub-item"><a href="../F_topographie/triangulation.html">F4 — Triangulation</a></div>
-            <div class="sub-item"><a href="../F_topographie/course_d_orientation.html">F5 — Course d’orientation 5 km</a></div>
-          </div>
+        <div class="at4_description">
+         <h4>Caractéristiques Techniques</h4>
+          <ul>
+            <li>Calibre : 84 mm</li>
+            <li>Capacité de charge : 1 roquette à charge creuse, usage unique, tiré à 220 m/s</li>
+            <li>Poids : 7,6 kg</li>
+            <li>Longueur : 1,04 m</li>
+            <li>Portée maximale de combat : 400 m</li>
+            <li>Portée pratique objectif fixe : 300 m (200 m si objectf mobile)</li>
+            <li>Distance d'armement : 20 m</li>
+            <li>Perforation : 600 mm d'acier, 1 450 mm de béton</li>
+          </ul>
         </div>
+      </div>
 
-        <div class="section">
-          <button class="section-btn" aria-expanded="false" onclick="toggle(this,'sG')">
-            <span class="label"><span class="badge">G</span>Entraînement physique</span>
-            <span class="chevron">&#8964;</span>
-          </button>
-          <div class="sub-list" id="sG">
-            <div class="sub-item"><a href="../G_entrainement_physique/parcours_obstacle.html">G1 — Parcours d’obstacle</a></div>
-            <div class="sub-item"><a href="../G_entrainement_physique/aguerrissement.html">G2 — Parcours tactique d’évasion : mission de nuit</a></div>
-          </div>
-        </div>
-
+      <div class="right_column_at4">
+        <img
+          class="glock17"
+          src="../../img/at4_cs.jpg"
+          alt="AT-4 CS"
+        />
       </div>
     </div>
 
-    <h1>CATI AT4 : Bravo</h1>
 
-    <a href="../../index.html" class="home-btn">⌂ Accueil</a>
+    <h3>Procédure</h3>
+    <p>
+      <strong>Sortie des organes de visée</strong><br />
+      Déployer l'oeilleton du corps du lanceur (possible de l'aggrandir avec / du pavé numérique)<br /><br />
+      <strong>Retrait des sécurités</strong><br />
+      Retrait de la goupille double, lever le levier d'armement<br /><br />
+      <strong>Visée</strong><br />
+      Régler la distance de 50 à 400 m (par palier de 50) et aligner le guidon au pieds de l'objectif (sur l'avant en cas de mobile en suivant quelques secondes)<br /><br />
+      <strong>Faire feu</strong>
+    </p>
 
-  </header>
-  
-</body>
-<footer class="site-footer">
-  <p>© 2026 Formation Élémentaire. <br> Tous droits réservés.</p>
-  <p>Conçu par Thomas Vallée <br> et Julien Le Merrer Raynaud.</p>
-</footer>
+    <ul>
+      <li>Ordre de Feu</li>
+      <li>Annoncer "AT4 AT4 !"</li>
+      <li>Attendre le retour "Clair !"</li>
+      <li>Faire feu en pressant le bouton rouge de détente</li>
+    </ul>
 
+    <h2 class="titre">Module Bravo</h2>
+    
+    <h4>Tir sur véhicule de combat d'infanterie fixe</h4>
+    <p>Distance : 100 m puis 200 m<br /><br />
+    Cadre d'ordre de l'instructeur de tir :</p>
+    <cite>Pour un tir sur un véhicule à <strong>[distance]</strong>, feu dès que prêt !</cite>
+
+    <h4>Tir sur véhicule de combat d'infanterie mobile</h4>
+    <p>Distance 200 m<br />
+    Vitesse : 20 km/h<br /><br />
+    Cadre d'ordre de l'instructeur de tir :</p>
+    <cite>Pour un tir sur un véhicule à <strong>[distance]</strong>, en défilement <strong>[gauche / droite]</strong>, feu dès que prêt !</cite>
+
+  </body>
+  <footer class="site-footer">
+    <p>
+      © 2026 Formation Élémentaire. <br />
+      Tous droits réservés.
+    </p>
+    <p>
+      Conçu par Thomas Vallée <br />
+      et Julien Le Merrer Raynaud.
+    </p>
+  </footer>
 </html>

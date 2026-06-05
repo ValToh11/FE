@@ -293,6 +293,49 @@ h2 {
   margin-top: 20px;
   background: var(--color-background-primary);
  }
+
+/* --- AT-4 --- */
+
+.AT4_container {
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+.left_column_at4 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.at4_global {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  margin-top: 20px;
+  background: var(--color-background-primary);
+}
+
+.at4_description {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  margin-top: 20px;
+  background: var(--color-background-primary);
+}
+
+.right_column_at4 {
+  flex: 1;
+  flex: 0 0 40%;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 10px;
+  background: var(--color-background-primary);
+}
+
+
+
  /* --- Le tableau --- */
     table {
       border-collapse: collapse;  /* fusionne les bordures en une seule ligne */
