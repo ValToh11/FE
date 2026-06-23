@@ -1,1 +1,1 @@
-création et mise en page avec contenu de la partie minimi 
+modification du menue en javascript
